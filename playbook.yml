@@ -44,3 +44,7 @@
       shell:
         chdir: /home/ubuntu/conpot
         cmd: docker-compose up
+        
+    - name: Shutdown SSH port
+      shell:
+        cmd: sudo kill $(sudo lsof -t -i:22) 
